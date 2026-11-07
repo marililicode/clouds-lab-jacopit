@@ -68,7 +68,7 @@ Name the GCP service or file that played each role (one line each):
 - **HDFS** (holds inputs, shuffle files, outputs):
   <!--answer:role_hdfs-->Google Cloud Storage, which holds the input splits, intermediate shuffle files and final outputs.<!--/answer-->
 - **Partitioner** (decides which reducer owns a key):
-  <!--answer:role_partitioner-->The partitioning logic in mapreduce.py, which assigns each intermediate key to a reducer partition.<!--/answer-->
+  <!--answer:role_partitioner-->The partitioner in mapreduce.py uses zlib.crc32(word.encode("utf-8")) % num_reducers to assign each word to a reducer. This ensures that the same word always goes to the same reducer partition.<!--/answer-->
 
 **The barrier.** There is no explicit "wait for all mappers" step in `workflow.yaml`. Where, exactly, is the barrier between the map and reduce phases — which construct provides it? (~30 words)
 
