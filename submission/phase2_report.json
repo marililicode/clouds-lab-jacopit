@@ -1,0 +1,30 @@
+{
+  "phase": "2",
+  "environment": {
+    "colab": true
+  },
+  "attention": {
+    "naive_ms": 243.047,
+    "vectorized_ms": 0.999,
+    "speedup": 243.29
+  },
+  "threads": {
+    "1": 2268.489,
+    "2": 2067.609,
+    "4": 2295.831,
+    "8": 2300.662
+  },
+  "devices": {
+    "cpu_ms": 428242.5,
+    "gpu_ms": 12993.9
+  },
+  "training": {
+    "steps": 2000,
+    "final_loss": 1.5017,
+    "param_count": 4935680
+  },
+  "sample": "\nI would Leart-out bread of use, sir. How, the we'll\nThou so profect mock'd to be most trock.\n\nYORK:\nTo he ocquorious,--be an have nathe hops in a inton,\nVirtures thrim to dine full our his mown drove,",
+  "model": {
+    "gcs_url": "https://storage.googleapis.com/clouds-labs-jacopit-eurecomgpt/model.safetensors"
+  }
+}
